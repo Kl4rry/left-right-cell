@@ -2,6 +2,11 @@
 name = "left-right-cell"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "A cell with lock-free concurrent read access."
+homepage = "https://github.com/Kl4rry/left-right-cell"
+repository = "https://github.com/Kl4rry/left-right-cell"
+documentation = "https://docs.rs/left-right-cell"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
