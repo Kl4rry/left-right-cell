@@ -59,6 +59,15 @@ impl<T> Deref for ReadGuard<'_, T> {
     }
 }
 
+impl<T> Clone for ReadHandle<T>
+where
+    T: Clone,
+{
+    fn clone(&self) -> Self {
+        ReadHandle(self.0.clone())
+    }
+}
+
 /// A handle to the write half of the cell.
 /// When this handle is dropped the backing data is also dropped.
 pub struct WriteHandle<T: Clone>(left_right::WriteHandle<Inner<T>, SetOp<T>>);
